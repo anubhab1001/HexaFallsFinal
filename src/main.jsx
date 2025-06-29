@@ -8,6 +8,9 @@ import Home from "./assets/components/home/home.jsx";
 import Upload from "./assets/components/upload/upload.jsx";
 import About from "./assets/components/about/about.jsx";
 import History from "./assets/components/history/history.jsx";
+import AuthHero from "./assets/components/login/AuthHero.jsx";
+import { User } from "lucide-react";
+import { UserProvider } from "./userContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,22 +23,28 @@ const router = createBrowserRouter([
       },
       {
         path: "upload",
-        element: <Upload/>
+        element: <Upload />,
       },
       {
         path: "about",
-        element:<About/>
+        element: <About />,
       },
       {
         path: "history",
-        element:<History/>
-      }
+        element: <History />,
+      },
+      {
+        path: "login",
+        element: <AuthHero />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </React.StrictMode>
 );
