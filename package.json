@@ -12,7 +12,11 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@tailwindcss/vite": "^4.1.11",
+<<<<<<< HEAD
     "firebase": "^11.9.1",
+=======
+    "axios": "^1.10.0",
+>>>>>>> ec1ee1b0899dd0c9bc6f858c950b38cd7fcf4de2
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
